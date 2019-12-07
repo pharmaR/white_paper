@@ -18,8 +18,8 @@ output:
 This white paper addresses concerns raised by statisticians, statistical
 programmers, informatics teams, executive leadership, quality assurance
 teams and others within the pharmaceutical industry about the use of R
-as a primary tool for statistical analysis for regulatory submission
-work.
+and selected R packages as a primary tool for statistical analysis for 
+regulatory submission work.
 
 When discussing validation of software systems 2 areas should be
 considered (1) infrastructure validation and (2) software validation.
@@ -33,9 +33,11 @@ such as those proposed in GAMP5, particularly change control management.
 Discussions regarding infrastructure validation are not in scope of this
 paper.
 
-R package validation falls under software validation and we propose a
-risk-based approach for assessing R package accuracy and incorporating
-them within a validated system. Many of the thoughts in this paper are
+Within a validated infrastructure, the scope of this paper is to propose 
+a risk-based R package validation approach for assessing the quality of 
+an R package. 
+
+Many of the thoughts in this paper are
 extracted, verbatim, from the [R Validation
 Hub](http://www.pharmar.org), a cross-industry collaboration formed to
 assist companies in using R for regulatory work.
@@ -43,8 +45,9 @@ assist companies in using R for regulatory work.
 # What is R?
 
 As stated on the [R-Project
-website](https://www.r-project.org/about.html), "R is a language and
-environment for statistical computing and graphics... It is available as
+website](https://www.r-project.org/about.html) and[ the guidance for the use of R
+in regulated clinical trial environments](https://www.r-project.org/doc/R-FDA.pdf), 
+"R is a language and environment for statistical computing and graphics... It is available as
 Free Software under the terms of the Free Software Foundation's GNU
 General Public License in source code form."
 
@@ -52,20 +55,20 @@ The official R distribution consists of 'Base R' and 'Recommended
 Packages'. Each of these is a collection of R packages (code libraries)
 that can be defined as follows:
 
-**Base R;** base, compiler, datasets, graphics, grDevices, grid,
+**Base R:** base, compiler, datasets, graphics, grDevices, grid,
 methods, parallel, splines, stats, stats4, tcltk, tools, utils
 
-**Recommend Packages;** boot, class, cluster, codetools, foreign,
+**Recommend Packages:** boot, class, cluster, codetools, foreign,
 KernSmooth, lattice, MASS, Matrix, mgcv, nlme, nnet, rpart, spatial,
 survival
 
 Beyond official R distribution, users in the open source community can
 submit their own R packages to an open source package repository known
 as the Central R Archive Network (CRAN). There are currently over 13,500
-packages available of CRAN, with further packages available via another
+packages available on CRAN, with further packages available via another
 popular life sciences repository (Bioconductor), GitHub and a scattering
-of other websites. In addition, R enthusiasts are developing packages
-internally.
+of other websites. In addition, R packages are developed within an organization 
+for internal use.
 
 # Regulations Governing the use of Statistical Software
 
