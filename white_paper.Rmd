@@ -226,26 +226,23 @@ risk of a package.
 
 A system qualification typically includes the execution of Installation,
 Operational and Performance tests. To qualify a system based around on
-R, tests need to be written that ensure that the R installation has been
+R, tests need to be written to ensure that the R installation has been
 installed correctly and that it performs as expected. This activity is
 required, regardless of the risk assessment score for individual
-packages. Thus, even if a package is deemed to be 'low risk' some tests
-may need to be written.
+packages.
 
 The purpose of the system qualification is to ensure the reproducibility
 of expected results. It is not to reassess the risk of individual
 packages.
 
-Some packages may already contain tests. Those deemed 'low risk' almost
-certainly will. In addition, for those packages deemed to be medium/high
-risk, additional tests may have been generated. All such tests are
+Some packages may already contain tests. All such tests are
 suitable for a system qualification. However, it should be noted that
 the *expected* results, as determined by package authors / maintainers,
 may differ depending upon the Operating System configuration. It may not
 therefore be prudent to simply re-run all available tests. Instead a
 subset of tests should be chosen that reflects typical usage.
 
-# Reproducibility and Traceability
+## Reproducibility
 
 It is important to acknowledge that R (and other open source languages)
 presents additional challenges with respect to the reproducibility of an
@@ -253,10 +250,8 @@ environment. The evolution of R packages is effectively continuous and
 thus maintaining a stable R installation that allows for the addition of
 new and/or updated packages can be a challenge.
 
-## Reproducibility
-
-Package dependency trees can be very large and complex. A single package
-may ultimately require the installation of over 100 additional packages.
+Package dependency trees can be very large and complex with potential system dependency. 
+A single package may ultimately require the installation of over 100 additional packages and other softwares.
 If just one package version number turns out to be incompatible the
 Intended for Use package that we're interested in cannot be installed.
 It is therefore vital to ensure compatibility of R packages within an
@@ -269,7 +264,7 @@ which must be managed.
 There are several commercial and open source offerings that attempt to
 deal with the management of R packages in different ways. Some of these
 focus on R, some on the environment itself. These are not discussed
-here.
+here. (Could we provide some reference?)
 
 ## Traceability
 
