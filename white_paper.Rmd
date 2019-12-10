@@ -337,7 +337,7 @@ and additional information on the proposed metrics, the rationale for
 their use and how these are being implemented can be found in the [R
 Validation Hub website](https://www.pharmar.org/packages/). We recommend
 that the risk assessment be collated via individual package reports.
-These reports should detail the risk scores. Justification for these
+These reports should detail the risk scores (by whome?). Justification for these
 scores should be based on the metrics obtained for the package. These
 reports may serve as documented evidence of the accuracy assessment for
 R.
@@ -460,7 +460,11 @@ Operating Procedures.
 
 ### Package Remediation / Testing
 
-One way of mitigating risk for medium/high risk packages is to generate
+* Low risk: High quality R package ready for regulatory submission. 
+* Medium risk: High quality R package.  
+* Open risk: Any R package pass CRAN checklist for CRAN submissions.
+
+One way of mitigating risk for medium/open risk packages is to generate
 tests for important package functionality. The process for this should
 be no different than the standard process for developing
 functions/macros internally. Typically, requirements are gathered, and
