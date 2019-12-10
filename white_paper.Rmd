@@ -292,10 +292,10 @@ these packages directly[^2].
 We therefore define two classifications of R packages within any
 installation:
 
-1.  **Intended for Use.** These will be loaded directly by a user during
+1.  **Main Packages** These will be loaded directly by a user during
     an R session.
 
-2.  **Package Imports.** These packages are required to be installed in
+2.  **Dependency Packages** These packages are required to be installed in
     order for us to be able to use the packages we intend to use. They
     are comparable to a system dependency, or the 'backend' code
     supporting a user interface.
