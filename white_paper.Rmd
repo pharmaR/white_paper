@@ -106,9 +106,13 @@ build identification.
 
 In conclusion, 21 CFR Part 11 is not relevant or mandatory in the
 context of statistical analysis software itself. However, when using R
-as part of a validated system, elements of 21 CFR Part 11 do apply.
+as part of a validated system, elements of 21 CFR Part 11 do apply. [ the guidance for the use of R
+in regulated clinical trial environments](https://www.r-project.org/doc/R-FDA.pdf) provided
+more details of this topic.
 
-# Validation
+The rest of this paper focuses on R package validation and its dependency. 
+
+# R Packages Validation
 
 According to the FDA's Glossary of Computer System Software Development
 Terminology:
@@ -129,11 +133,11 @@ elements:
 3.  Traceability
 
 This paper outlines how to ensure the accuracy of R packages when used
-as part of a validated environment.
+as part of a validated environment with R.
 
 **Note:** Since R is open source, ensuring that the environment is
 reproducible and traceable presents several challenges. These challenges
-must be addressed.
+should be addressed by end user's organization.
 
 ## Accuracy
 
@@ -145,7 +149,7 @@ differentiates R packages by the following types (see German et al,
     and shipped with the basic installation
 
 -   contributed (open source) packages - developed by anyone, and may
-    differ in popularity and accuracy
+    differ in accuracy
 
 ![source: German et al (2013): The Evolution of the R Software
 Ecosystem](media/image1.png){width="2.6944444444444446in"
@@ -161,8 +165,8 @@ both types of packages reliably produce accurate results.
 ### Base R and Recommended Packages
 
 The R Foundation develops both the base and recommended packages and
-follows practices that ensures the accuracy of each. These practices
-include:
+follows a software development lifecycle that ensures the accuracy of each. 
+These practices include:
 
 -   Proper maintenance of the R source code, and control of releases
 
@@ -188,20 +192,21 @@ Tracking System](http://bugs.r-project.org/). This process allows for
 more extensive testing, and increases the likelihood that bugs are fixed
 before releases.
 
-In conclusion, there is minimal risk in using Base R and Recommended
-Packages as a component in a validated system for regulatory analysis
-and reporting.
+In conclusion, there is minimal risk in using base and recommended (core)
+packages as a component in a validated system for regulatory analysis
+and reporting with R.
 
 ### Contributed Packages
 
-Since R is Open Source, contributed packages can be developed by anyone.
-Therefore, ensuring the accuracy of each contributed package is
+Since R is Open Source, contributed packages can be developed by anyone and 
+may depends on other R package and softwares.
+Therefore, ensuring the accuracy of each contributed package and its dependency is
 necessary.
 
 R Validation Hub focuses on contributed packages on The Comprehensive R
-Archive Network (CRAN). All packages available on CRAN must pass a
-series of technical checks including an "R CMD check". An "R CMD check"
-is a set of technical checks for an R package that ensures that all
+Archive Network (CRAN). All packages available on CRAN have passed a
+series of technical checks in the [checklist for CRAN submission](https://cran.r-project.org/web/packages/submission_checklist.html).
+The technical checks for an R package ensures that all
 submitted code's:
 
 -   examples run successfully
@@ -210,11 +215,9 @@ submitted code's:
 
 -   packages are compatible with other packages on CRAN
 
-However, these checks do not guarantee the accuracy of a package. It is
-therefore suggested that a risk assessment exercise be conducted to
-establish the level to which individual package maintainers have gone to
-ensure the accuracy / validity of their packages and the level of
-community usage and testing that packages have been exposed to. In
+However, these checks do not necessarily guarantee the accuracy of an R package. 
+It is therefore suggested that a risk assessment exercise be conducted to
+evaluate the accuracy/validity of an R package with its dependency. In
 addition, it is important to take note of the purpose of an R package
 and hence its intended usage as these have a major impact the expected
 risk of a package.
