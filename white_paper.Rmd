@@ -40,10 +40,10 @@ paper.
 The aim of this paper is to propose a possible risk-based approach for assessing R package accuracy within a validated infrastructure.
 
 Many of the thoughts and ideas addressed in this paper are
-extracted, verbatim, from the [R Validation
-Hub](http://www.pharmar.org), a cross-industry initiative whose mission is to enable the use of R by the bio-pharmaceutical industry in a regulatory setting.  
+extracted, verbatim, from the [R Validation Hub](http://www.pharmar.org), a cross-industry initiative whose mission is to enable the use of R by the bio-pharmaceutical industry in a regulatory setting.  
 
 The paper reflects the current thinking of the R Validation Hub working group and may evolve over time.
+
 
 # What is R?
 
@@ -507,8 +507,8 @@ become associated with low risk packages. It would be reasonable to
 allocate a trusted status to any package developer that attains a 'low
 risk' evaluation for multiple packages over a sustained period of time.
 Precisely how many packages, and how many iterations of risk assessment
-should be completed before allocating the *Trusted Resource* status, is down to the
-individual organisation to determine.
+should be completed before allocating the *Trusted Resource* status, is down to the individual organisation to determine.
+
 
 There are several popular packages / collections of R packages that
 could be considered for a 'trusted resource' status. One of the most
