@@ -18,8 +18,8 @@ output:
 This white paper addresses concerns raised by statisticians, statistical
 programmers, informatics teams, executive leadership, quality assurance
 teams and others within the pharmaceutical industry about the use of R
-as a primary tool for statistical analysis for regulatory submission
-work.
+and selected R packages as a primary tool for statistical analysis for 
+regulatory submission work.
 
 When discussing validation of software systems 2 areas should be
 considered (1) infrastructure validation and (2) software validation.
@@ -33,9 +33,11 @@ such as those proposed in GAMP5, particularly change control management.
 Discussions regarding infrastructure validation are not in scope of this
 paper.
 
-R package validation falls under software validation and we propose a
-risk-based approach for assessing R package accuracy and incorporating
-them within a validated system. Many of the thoughts in this paper are
+Within a validated infrastructure, the scope of this paper is to propose 
+a risk-based R package validation approach for assessing the quality of 
+an R package. 
+
+Many of the thoughts in this paper are
 extracted, verbatim, from the [R Validation
 Hub](http://www.pharmar.org), a cross-industry collaboration formed to
 assist companies in using R for regulatory work.
@@ -43,8 +45,9 @@ assist companies in using R for regulatory work.
 # What is R?
 
 As stated on the [R-Project
-website](https://www.r-project.org/about.html), "R is a language and
-environment for statistical computing and graphics... It is available as
+website](https://www.r-project.org/about.html) and[ the guidance for the use of R
+in regulated clinical trial environments](https://www.r-project.org/doc/R-FDA.pdf), 
+"R is a language and environment for statistical computing and graphics... It is available as
 Free Software under the terms of the Free Software Foundation's GNU
 General Public License in source code form."
 
@@ -52,20 +55,20 @@ The official R distribution consists of 'Base R' and 'Recommended
 Packages'. Each of these is a collection of R packages (code libraries)
 that can be defined as follows:
 
-**Base R;** base, compiler, datasets, graphics, grDevices, grid,
+**Base R:** base, compiler, datasets, graphics, grDevices, grid,
 methods, parallel, splines, stats, stats4, tcltk, tools, utils
 
-**Recommend Packages;** boot, class, cluster, codetools, foreign,
+**Recommend Packages:** boot, class, cluster, codetools, foreign,
 KernSmooth, lattice, MASS, Matrix, mgcv, nlme, nnet, rpart, spatial,
 survival
 
 Beyond official R distribution, users in the open source community can
 submit their own R packages to an open source package repository known
 as the Central R Archive Network (CRAN). There are currently over 13,500
-packages available of CRAN, with further packages available via another
+packages available on CRAN, with further packages available via another
 popular life sciences repository (Bioconductor), GitHub and a scattering
-of other websites. In addition, R enthusiasts are developing packages
-internally.
+of other websites. In addition, R packages are developed within an organization 
+for internal use.
 
 # Regulations Governing the use of Statistical Software
 
@@ -103,9 +106,13 @@ build identification.
 
 In conclusion, 21 CFR Part 11 is not relevant or mandatory in the
 context of statistical analysis software itself. However, when using R
-as part of a validated system, elements of 21 CFR Part 11 do apply.
+as part of a validated system, elements of 21 CFR Part 11 do apply. [ the guidance for the use of R
+in regulated clinical trial environments](https://www.r-project.org/doc/R-FDA.pdf) provided
+more details of this topic.
 
-# Validation
+The rest of this paper focuses on R package validation and its dependency. 
+
+# R Packages Validation
 
 According to the FDA's Glossary of Computer System Software Development
 Terminology:
@@ -126,11 +133,11 @@ elements:
 3.  Traceability
 
 This paper outlines how to ensure the accuracy of R packages when used
-as part of a validated environment.
+as part of a validated environment with R.
 
 **Note:** Since R is open source, ensuring that the environment is
 reproducible and traceable presents several challenges. These challenges
-must be addressed.
+should be addressed by end user's organization.
 
 ## Accuracy
 
@@ -142,7 +149,7 @@ differentiates R packages by the following types (see German et al,
     and shipped with the basic installation
 
 -   contributed (open source) packages - developed by anyone, and may
-    differ in popularity and accuracy
+    differ in accuracy
 
 ![source: German et al (2013): The Evolution of the R Software
 Ecosystem](media/image1.png){width="2.6944444444444446in"
@@ -158,8 +165,8 @@ both types of packages reliably produce accurate results.
 ### Base R and Recommended Packages
 
 The R Foundation develops both the base and recommended packages and
-follows practices that ensures the accuracy of each. These practices
-include:
+follows a software development lifecycle that ensures the accuracy of each. 
+These practices include:
 
 -   Proper maintenance of the R source code, and control of releases
 
@@ -185,20 +192,21 @@ Tracking System](http://bugs.r-project.org/). This process allows for
 more extensive testing, and increases the likelihood that bugs are fixed
 before releases.
 
-In conclusion, there is minimal risk in using Base R and Recommended
-Packages as a component in a validated system for regulatory analysis
-and reporting.
+In conclusion, there is minimal risk in using base and recommended (core)
+packages as a component in a validated system for regulatory analysis
+and reporting with R.
 
 ### Contributed Packages
 
-Since R is Open Source, contributed packages can be developed by anyone.
-Therefore, ensuring the accuracy of each contributed package is
+Since R is Open Source, contributed packages can be developed by anyone and 
+may depends on other R package and softwares.
+Therefore, ensuring the accuracy of each contributed package and its dependency is
 necessary.
 
 R Validation Hub focuses on contributed packages on The Comprehensive R
-Archive Network (CRAN). All packages available on CRAN must pass a
-series of technical checks including an "R CMD check". An "R CMD check"
-is a set of technical checks for an R package that ensures that all
+Archive Network (CRAN). All packages available on CRAN have passed a
+series of technical checks in the [checklist for CRAN submission](https://cran.r-project.org/web/packages/submission_checklist.html).
+The technical checks for an R package ensures that all
 submitted code's:
 
 -   examples run successfully
@@ -207,11 +215,9 @@ submitted code's:
 
 -   packages are compatible with other packages on CRAN
 
-However, these checks do not guarantee the accuracy of a package. It is
-therefore suggested that a risk assessment exercise be conducted to
-establish the level to which individual package maintainers have gone to
-ensure the accuracy / validity of their packages and the level of
-community usage and testing that packages have been exposed to. In
+However, these checks do not necessarily guarantee the accuracy of an R package. 
+It is therefore suggested that a risk assessment exercise be conducted to
+evaluate the accuracy/validity of an R package with its dependency. In
 addition, it is important to take note of the purpose of an R package
 and hence its intended usage as these have a major impact the expected
 risk of a package.
@@ -220,26 +226,23 @@ risk of a package.
 
 A system qualification typically includes the execution of Installation,
 Operational and Performance tests. To qualify a system based around on
-R, tests need to be written that ensure that the R installation has been
+R, tests need to be written to ensure that the R installation has been
 installed correctly and that it performs as expected. This activity is
 required, regardless of the risk assessment score for individual
-packages. Thus, even if a package is deemed to be 'low risk' some tests
-may need to be written.
+packages.
 
 The purpose of the system qualification is to ensure the reproducibility
 of expected results. It is not to reassess the risk of individual
 packages.
 
-Some packages may already contain tests. Those deemed 'low risk' almost
-certainly will. In addition, for those packages deemed to be medium/high
-risk, additional tests may have been generated. All such tests are
+Some packages may already contain tests. All such tests are
 suitable for a system qualification. However, it should be noted that
 the *expected* results, as determined by package authors / maintainers,
 may differ depending upon the Operating System configuration. It may not
 therefore be prudent to simply re-run all available tests. Instead a
 subset of tests should be chosen that reflects typical usage.
 
-# Reproducibility and Traceability
+## Reproducibility
 
 It is important to acknowledge that R (and other open source languages)
 presents additional challenges with respect to the reproducibility of an
@@ -247,10 +250,8 @@ environment. The evolution of R packages is effectively continuous and
 thus maintaining a stable R installation that allows for the addition of
 new and/or updated packages can be a challenge.
 
-## Reproducibility
-
-Package dependency trees can be very large and complex. A single package
-may ultimately require the installation of over 100 additional packages.
+Package dependency trees can be very large and complex with potential system dependency. 
+A single package may ultimately require the installation of over 100 additional packages and other softwares.
 If just one package version number turns out to be incompatible the
 Intended for Use package that we're interested in cannot be installed.
 It is therefore vital to ensure compatibility of R packages within an
@@ -263,7 +264,7 @@ which must be managed.
 There are several commercial and open source offerings that attempt to
 deal with the management of R packages in different ways. Some of these
 focus on R, some on the environment itself. These are not discussed
-here.
+here. (Could we provide some reference?)
 
 ## Traceability
 
@@ -291,10 +292,10 @@ these packages directly[^2].
 We therefore define two classifications of R packages within any
 installation:
 
-1.  **Intended for Use.** These will be loaded directly by a user during
+1.  **Main Packages** These will be loaded directly by a user during
     an R session.
 
-2.  **Package Imports.** These packages are required to be installed in
+2.  **Dependency Packages** These packages are required to be installed in
     order for us to be able to use the packages we intend to use. They
     are comparable to a system dependency, or the 'backend' code
     supporting a user interface.
@@ -336,7 +337,7 @@ and additional information on the proposed metrics, the rationale for
 their use and how these are being implemented can be found in the [R
 Validation Hub website](https://www.pharmar.org/packages/). We recommend
 that the risk assessment be collated via individual package reports.
-These reports should detail the risk scores. Justification for these
+These reports should detail the risk scores (by whome?). Justification for these
 scores should be based on the metrics obtained for the package. These
 reports may serve as documented evidence of the accuracy assessment for
 R.
@@ -459,7 +460,11 @@ Operating Procedures.
 
 ### Package Remediation / Testing
 
-One way of mitigating risk for medium/high risk packages is to generate
+* Low risk: High quality R package ready for regulatory submission. 
+* Medium risk: High quality R package.  
+* Open risk: Any R package pass CRAN checklist for CRAN submissions.
+
+One way of mitigating risk for medium/open risk packages is to generate
 tests for important package functionality. The process for this should
 be no different than the standard process for developing
 functions/macros internally. Typically, requirements are gathered, and
