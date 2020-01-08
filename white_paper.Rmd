@@ -41,7 +41,9 @@ The aim of this paper is to propose a possible risk-based approach for assessing
 
 Many of the thoughts and ideas addressed in this paper are
 extracted, verbatim, from the [R Validation
-Hub](http://www.pharmar.org), a cross-industry initiative whose mission is to enable the use of R by the bio-pharmaceutical industry in a regulatory setting.
+Hub](http://www.pharmar.org), a cross-industry initiative whose mission is to enable the use of R by the bio-pharmaceutical industry in a regulatory setting.  
+
+The paper reflects the current thinking of the R Validation Hub working group and may evolve over time.
 
 # What is R?
 
