@@ -21,7 +21,7 @@ teams and others within the pharmaceutical industry about the use of R
 and selected R packages as a primary tool for statistical analysis for 
 regulatory submission work.
 
-When discussing validation of software systems 2 areas should be
+When discussing validation of software systems two areas should be
 considered (1) infrastructure validation and (2) software validation.
 Infrastructure includes the server, OS, necessary infrastructure
 software, etc... For example, a system may use a server running Redhat
@@ -33,9 +33,7 @@ such as those proposed in GAMP5, particularly change control management.
 Discussions regarding infrastructure validation are not in scope of this
 paper.
 
-Within a validated infrastructure, the scope of this paper is to propose 
-a risk-based R package validation approach for assessing the quality of 
-an R package. 
+The scope of this paper is to propose a risk-based approach for assessing R package accuracy within a validated infrastructure.
 
 Many of the thoughts in this paper are
 extracted, verbatim, from the [R Validation
@@ -253,7 +251,7 @@ new and/or updated packages can be a challenge.
 Package dependency trees can be very large and complex with potential system dependency. 
 A single package may ultimately require the installation of over 100 additional packages and other softwares.
 If just one package version number turns out to be incompatible the
-Intended for Use package that we're interested in cannot be installed.
+*Intended for Use* package of interest cannot be installed.
 It is therefore vital to ensure compatibility of R packages within an
 installation. It should be noted that on any given day all such
 dependencies on CRAN have been resolved. However, there is no standard
@@ -268,14 +266,14 @@ here.
 
 ## Traceability
 
-One of the core concepts presented in this paper is that Package Imports
+One of the core concepts presented in this paper is that *Package Imports*
 are not typically loaded by users and need not therefore be directly
 risk-assessed. If adopting this risk-based approach then measures need
 to be taken to ensure that users do not directly load the Package
 Imports. It is suggested that this is handled mainly through process,
 although tools could be developed to check using \`sessionInfo\` or
 \`devtools::session\_info\` that check the loaded packages against
-packages lists of Intended for Use and Package Imports. In any case the
+packages lists of *Intended for Use* and *Package Imports*. In any case the
 use of these tools within a standard, logged, workflow is highly
 recommended to ensure traceability of the work.
 
@@ -300,23 +298,23 @@ installation:
     are comparable to a system dependency, or the 'backend' code
     supporting a user interface.
 
-An Intended for Use package may also be a Package Import for another
+An *Intended for Use* package may also be a Package Import for another
 package. In such cases a conservative approach should be adopted and the
-package should be classified as Intended for Use. Package Imports are
+package should be classified as *Intended for Use*. *Package Imports* are
 identified within a package's 'DESCRIPTION' file using the 'Imports'
 field. This field differs from the 'Depends' field for which
 dependencies *are* imported into the name space. This allows the end
 user to use the functions contained within the package. Packages
 specified in the depends field should therefore be classified as
-Intended for Use packages.
+*Intended for Use* packages.
 
 A risk-based approach should focus on the way that components of the
 system will be used. From a reproducibility perspective, it is important
-that the Package Imports are managed appropriately. But, the accuracy of
+that the *Package Imports* are managed appropriately. But, the accuracy of
 these packages only needs to be verified by assessing the Intended for
 Use packages. This approach can be extended to system qualification.
-During which, the operational focus should be on the Intended for Use
-packages and not the Package Imports. It is also important to make this
+During which, the operational focus should be on the *Intended for Use*
+packages and not the *Package Imports*. It is also important to make this
 distinction when considering the maintenance of a system over time
 
 ## Components of a Risk Assessment Framework
@@ -469,7 +467,7 @@ traced back to a requirement. We recommend using a unit test framework
 such as testthat to implement this in R.
 
 Tests should be written for all statistical modelling functions within
-an Intended for Use Statistical Package, regardless of the risk
+an *Intended for Use* Statistical Package, regardless of the risk
 assessment. Any tests generated can be used to assist in the
 qualification of a system.
 
@@ -554,8 +552,8 @@ reproducibility and traceability of the system. For R the primary
 challenge is in ensuring the accuracy of results.
 
 A risk-based approach to the adoption of R packages is highly
-recommended. This should focus on Intended for Use packages and not
-Package Imports. It is important to assess individual packages based on:
+recommended. This should focus on *Intended for Use* packages and not
+*Package Imports*. It is important to assess individual packages based on:
 
 1.  Purpose
 
@@ -577,7 +575,7 @@ that future offerings default to a low risk score without the need for a
 full risk assessment.
 
 Regardless of the relative risk posed by a package, it is important to
-develop a suite of qualification tests for Intended for Use R packages.
+develop a suite of qualification tests for *Intended for Use* R packages.
 These should be developed using a known framework such as 'testthat' and
 need not include all available tests within the packages themselves.
 Having established the accuracy and integrity of R packages within an
