@@ -22,7 +22,11 @@ and selected R packages as a primary tool for statistical analysis for
 regulatory submission work.
 
 When discussing validation of software systems two areas should be
-considered (1) infrastructure validation and (2) software validation.
+considered:
+
+(1) Infrastructure validation 
+(2) Software validation
+
 Infrastructure includes the server, OS, necessary infrastructure
 software, etc... For example, a system may use a server running Redhat
 Enterprise Linux (RHEL) version 6 and several other infrastructure
@@ -33,12 +37,11 @@ such as those proposed in GAMP5, particularly change control management.
 Discussions regarding infrastructure validation are not in scope of this
 paper.
 
-The scope of this paper is to propose a risk-based approach for assessing R package accuracy within a validated infrastructure.
+The aim of this paper is to propose a possible risk-based approach for assessing R package accuracy within a validated infrastructure.
 
-Many of the thoughts in this paper are
+Many of the thoughts and ideas addressed in this paper are
 extracted, verbatim, from the [R Validation
-Hub](http://www.pharmar.org), a cross-industry collaboration formed to
-assist companies in using R for regulatory work.
+Hub](http://www.pharmar.org), a cross-industry initiative whose mission is to enable the use of R by the bio-pharmaceutical industry in a regulatory setting.
 
 # What is R?
 
@@ -62,7 +65,7 @@ survival
 
 Beyond official R distribution, users in the open source community can
 submit their own R packages to an open source package repository known
-as the Central R Archive Network (CRAN). There are currently over 13,500
+as the Central R Archive Network (CRAN). There are currently over 15,000
 packages available on CRAN, with further packages available via another
 popular life sciences repository (Bioconductor), GitHub and a scattering
 of other websites. In addition, R packages are developed within an organization 
@@ -135,7 +138,7 @@ as part of a validated environment with R.
 
 **Note:** Since R is open source, ensuring that the environment is
 reproducible and traceable presents several challenges. These challenges
-should be addressed by end user's organization.
+should be addressed by end user's organisation.
 
 ## Accuracy
 
@@ -257,7 +260,7 @@ installation. It should be noted that on any given day all such
 dependencies on CRAN have been resolved. However, there is no standard
 way of ensuring compatibility between repositories such as CRAN and
 Bioconductor or GitHub. Some R packages also have system dependencies
-which must be managed.
+which need to be managed.
 
 There are several commercial and open source offerings that attempt to
 deal with the management of R packages in different ways. Some of these
@@ -512,8 +515,8 @@ assessments. In particular, certain package authors and maintainers may
 become associated with low risk packages. It would be reasonable to
 allocate a trusted status to any package developer that attains a 'low
 risk' evaluation for multiple packages over a sustained period of time.
-Precisely how many packages and how many iterations of risk assessment
-must be completed before allocating this status is down to the
+Precisely how many packages, and how many iterations of risk assessment
+should be completed before allocating the *Trusted Resource* status, is down to the
 individual organisation.
 
 There are several popular packages / collections of R packages that
