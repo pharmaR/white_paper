@@ -55,10 +55,10 @@ The official R distribution consists of 'Base R' and 'Recommended
 Packages'. Each of these is a collection of R packages (code libraries)
 that can be defined as follows:
 
-**Base R:** base, compiler, datasets, graphics, grDevices, grid,
+**Base R;** base, compiler, datasets, graphics, grDevices, grid,
 methods, parallel, splines, stats, stats4, tcltk, tools, utils
 
-**Recommend Packages:** boot, class, cluster, codetools, foreign,
+**Recommend Packages;** boot, class, cluster, codetools, foreign,
 KernSmooth, lattice, MASS, Matrix, mgcv, nlme, nnet, rpart, spatial,
 survival
 
@@ -112,7 +112,7 @@ more details of this topic.
 
 The rest of this paper focuses on R package validation and its dependency. 
 
-# R Packages Validation
+# R Packages and Validation
 
 According to the FDA's Glossary of Computer System Software Development
 Terminology:
@@ -179,7 +179,7 @@ These practices include:
     results, and resolving all errors prior to release
 
 The R Foundation provides context and further information around each of
-these points in [R: Regulatory Compliance and Validation Issues. A
+these points in [R: Regulatory Compliance and Validation Issues. A
 Guidance Document for the Use of R in Regulated Clinical Trial
 Environments](https://www.r-project.org/doc/R-FDA.pdf).
 
@@ -206,7 +206,7 @@ necessary.
 R Validation Hub focuses on contributed packages on The Comprehensive R
 Archive Network (CRAN). All packages available on CRAN have passed a
 series of technical checks in the [checklist for CRAN submission](https://cran.r-project.org/web/packages/submission_checklist.html).
-The technical checks for an R package ensures that all
+The technical checks for an R package ensure that all
 submitted code's:
 
 -   examples run successfully
@@ -217,7 +217,7 @@ submitted code's:
 
 However, these checks do not necessarily guarantee the accuracy of an R package. 
 It is therefore suggested that a risk assessment exercise be conducted to
-evaluate the accuracy/validity of an R package with its dependency. In
+evaluate the accuracy/validity of an R package with its dependencies. In
 addition, it is important to take note of the purpose of an R package
 and hence its intended usage as these have a major impact the expected
 risk of a package.
@@ -264,7 +264,7 @@ which must be managed.
 There are several commercial and open source offerings that attempt to
 deal with the management of R packages in different ways. Some of these
 focus on R, some on the environment itself. These are not discussed
-here. (Could we provide some reference?)
+here. 
 
 ## Traceability
 
@@ -279,7 +279,7 @@ packages lists of Intended for Use and Package Imports. In any case the
 use of these tools within a standard, logged, workflow is highly
 recommended to ensure traceability of the work.
 
-# A Proposed Risk Assessment Framework
+# A Proposed R Package Risk Assessment Framework
 
 ## Classifying R Packages within an Installation
 
@@ -292,10 +292,10 @@ these packages directly[^2].
 We therefore define two classifications of R packages within any
 installation:
 
-1.  **Main Packages** These will be loaded directly by a user during
+1.  **Intended for Use** These will be loaded directly by a user during
     an R session.
 
-2.  **Dependency Packages** These packages are required to be installed in
+2.  **Package Imports** These packages are required to be installed in
     order for us to be able to use the packages we intend to use. They
     are comparable to a system dependency, or the 'backend' code
     supporting a user interface.
@@ -334,10 +334,10 @@ criteria:
 
 The criteria are described in more detail in the following subsections
 and additional information on the proposed metrics, the rationale for
-their use and how these are being implemented can be found in the [R
+their use and how these are being implemented can be found in the [R
 Validation Hub website](https://www.pharmar.org/packages/). We recommend
 that the risk assessment be collated via individual package reports.
-These reports should detail the risk scores (by whome?). Justification for these
+These reports should detail the level of risk that each package presents. Justification for these
 scores should be based on the metrics obtained for the package. These
 reports may serve as documented evidence of the accuracy assessment for
 R.
@@ -460,10 +460,6 @@ Operating Procedures.
 
 ### Package Remediation / Testing
 
-* Low risk: High quality R package ready for regulatory submission. 
-* Medium risk: High quality R package.  
-* Open risk: Any R package pass CRAN checklist for CRAN submissions.
-
 One way of mitigating risk for medium/open risk packages is to generate
 tests for important package functionality. The process for this should
 be no different than the standard process for developing
@@ -504,7 +500,7 @@ For open source software such audits are not logistically feasible.
 However, based on information available in the open source domain, it
 may still be possible to perform a virtual audit of a vendor and their
 practices. For example, R Foundation and R Core team, have published
-information about their practices in [R: Regulatory Compliance and
+information about their practices in [R: Regulatory Compliance and
 Validation Issues. A Guidance Document for the Use of R in Regulated
 Clinical Trial Environments](https://www.r-project.org/doc/R-FDA.pdf).
 It is the opinion of the R Validation Hub that this is sufficient to
