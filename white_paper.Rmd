@@ -42,7 +42,7 @@ The aim of this paper is to propose a possible risk-based approach for assessing
 Many of the thoughts and ideas addressed in this paper are
 extracted, verbatim, from the [R Validation Hub](http://www.pharmar.org), a cross-industry initiative whose mission is to enable the use of R by the bio-pharmaceutical industry in a regulatory setting.  
 
-The paper reflects the current thinking of the R Validation Hub working group and may evolve over time.
+The paper reflects the current thinking of the R Validation Hub working group and may evolve over time.  Additional detail will be provided via the website and future papers.
 
 
 # What is R?
@@ -564,14 +564,15 @@ levels of risk to each of these elements to develop an overall risk
 classification for a package. The risk assessment should be documented
 by individual package reports. Additional remediation for low risk
 packages is unlikely to yield any significant reduction in risk.
-However, remediation in the form of tests, linked to user requirements
-may be deemed necessary for higher risk packages. Over time it might be
-possible for collections of packages to obtain a 'trusted' status such
+However, remediation in the form of tests, linked to user requirements,
+may be deemed necessary for higher risk packages. 
+
+Over time, collections of packages may obtain a 'trusted' status such
 that future offerings default to a low risk score without the need for a
 full risk assessment.
 
 Regardless of the relative risk posed by a package, it is important to
-develop a suite of qualification tests for *Intended for Use* R packages.
+develop a set of qualification tests for *Intended for Use* R packages.
 These should be developed using a known framework such as 'testthat' and
 need not include all available tests within the packages themselves.
 Having established the accuracy and integrity of R packages within an
