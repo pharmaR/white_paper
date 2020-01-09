@@ -285,14 +285,13 @@ loaded package may, in turn, call functions within other packages. But
 a user would not load, nor call the functions within
 these packages directly[^2].
 
-We therefore define two classifications of R packages within any
-installation:
+Within an installation, two classifications of R packages are proposed:
 
 1.  **Intended for Use**. These will be loaded directly by a user during
     an R session.
 
 2.  **Imports**. These packages are required to be installed in
-    order for us to be able to use the packages we intend to use. They
+    order to use the *Intended for Use* packages. They
     are comparable to a system dependency, or the 'back-end' code
     supporting a user interface.
 
@@ -331,7 +330,11 @@ criteria:
 The criteria are described in more detail in the following subsections
 and additional information on the proposed metrics, the rationale for
 their use and how these are being implemented can be found in the [R
-Validation Hub website](https://www.pharmar.org/packages/). We recommend
+Validation Hub website](https://www.pharmar.org/packages/). An overview of the proposed process is provided in Figure 2.
+
+![Figure 2: Proposed Validation Workflow](img/validation_workflow.jpg){width=100%}
+
+It is recommended
 that the risk assessment be collated via individual package reports.
 These reports should detail the level of risk that each package presents. Justification for these
 scores should be based on the metrics obtained for the package. These
@@ -341,7 +344,7 @@ R.
 ### Purpose
 
 The purpose of an R package and its intended use greatly impacts the
-level of risk we assign to the package.
+level of risk presented by the package.
 
 For simplicity, two classifications are proposed:
 
