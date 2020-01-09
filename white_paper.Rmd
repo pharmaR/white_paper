@@ -579,14 +579,11 @@ installation, attention should be paid to the long-term maintenance of
 the system with respect to the additional challenges that R presents
 regarding reproducibility and traceability requirements.
 
-# References
 
 [^1]: German, D.M. & Adams, Bram & Hassan, Ahmed E.. (2013). The
     Evolution of the R Software Ecosystem. Proceedings of the Euromicro
     Conference on Software Maintenance and Reengineering, CSMR. 243-252.
     10.1109/CSMR.2013.33.
-
-# Endnotes
 
 [^2]: It is worth noting that it is technically possible to call any
     function from any installed package but this is extremely rare
