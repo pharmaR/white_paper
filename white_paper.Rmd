@@ -155,7 +155,7 @@ differentiates R packages by the following types (see German et al,
     differ in accuracy
 
 ![Figure 1 - Source: German et al (2013): The Evolution of the R Software
-Ecosystem (German, 2013)[^1]](media/image1.png){width="2.6944444444444446in"
+Ecosystem (German, 2013)[^1]](img/image1.png){width="2.6944444444444446in"
 height="2.0069444444444446in"}
 
 Core packages and contributed packages are managed by different
