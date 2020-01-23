@@ -8,7 +8,7 @@ author: |-
   John Sims, Director, Analytical Systems Architect & Data Science - Pfizer Vaccine Research
   
   On behalf of the R Validation Hub, an R Consortium-funded ISC Working Group
-date: "05-Dec-2019"
+date: "23-Jan-2020"
 output:
   html_document: 
     toc: true
